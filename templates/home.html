@@ -2,14 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Weather Data Api</title>
+    <title>Weather Data API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<h1>Weather Data Api</h1>
-<p> URL format: http://127.0.0.1:5000/api/v1/station/date</p>
-<p> For one station for one date: http://127.0.0.1:5000/api/v1/10/1988-10-25</p>
-<p> For one station for all dates: http://127.0.0.1:5000/api/v1/10</p>
-<p> For one station for one year: http://127.0.0.1:5000/api/v1/yearly/10/1988</p>
-<p>{{data|safe}}</p>
+    <h1>Weather Data API</h1>
+    <p>This API provides weather data for various stations. You can retrieve data for a specific date, all dates, or a specific year.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>URL Format</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>For one station for one date</td>
+                <td><a href="http://127.0.0.1:5000/api/v1/10/1988-10-25">http://127.0.0.1:5000/api/v1/10/1988-10-25</a></td>
+            </tr>
+            <tr>
+                <td>For one station for all dates</td>
+                <td><a href="http://127.0.0.1:5000/api/v1/10">http://127.0.0.1:5000/api/v1/10</a></td>
+            </tr>
+            <tr>
+                <td>For one station for one year</td>
+                <td><a href="http://127.0.0.1:5000/api/v1/yearly/10/1988">http://127.0.0.1:5000/api/v1/yearly/10/1988</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Station Information</h2>
+    {{data|safe}}
 </body>
 </html>
