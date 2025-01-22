@@ -1,0 +1,1 @@
+The Weather API is a Flask-based web application that provides historical temperature data for various weather stations. The API allows users to retrieve temperature data for specific stations and dates, as well as yearly data for a given station. This project is useful for analyzing historical weather patterns, understanding climate trends, and making weather-related decisions.
